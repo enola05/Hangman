@@ -16,7 +16,10 @@ while flag==0 :
   if '_' in answer:
     guess= input("make a guess : ").lower()
     clear()
+    if guess in answer:
+        print(f"You've already guessed {guess}")
     if guess not in chosen_word:
+      print(f"You guessed {guess}, that's not in the word. You lose a life." )
       lives=lives-1
     for i in range(0,len(chosen_word)):
       if chosen_word[i] == guess:
